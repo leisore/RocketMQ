@@ -14,13 +14,16 @@
 - - -
 1. 下载源码
     >cd F:\rocketmq
-     git clone https://github.com/alibaba/RocketMQ.git
+
+    >git clone https://github.com/alibaba/RocketMQ.git
 
 2. 编译源码：
     >set MAVEN_OPTS=-Xmx1024m
-     mvn -Dmaven.test.skip=true clean package install assembly:assembly -U
+
+    >mvn -Dmaven.test.skip=true clean package install assembly:assembly -U
 
     编译后分发包位于：
+
     >F:\rocketmq\RocketMQ\target\alibaba-rocketmq-3.2.2\alibaba-rocketmq
 
 3. 运行:
