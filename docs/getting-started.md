@@ -9,7 +9,7 @@
 - Maven£º3.0.4
 - Git£º1.7.4.msysgit.0
 - MinGW£º1.0.11
-- Eclipse 3.6.2
+- Eclipse£º3.6.2
 
 ------
 
@@ -251,7 +251,6 @@ RocketMQÄ¬ÈÏÓëÂ·¾¶ÓĞ¹ØµÄÅäÖÃÊôĞÔ¶¼ÓëÓÃ»§Ä¿Â¼ÓĞ¹Ø£¬ÔÚWindowsÏÂ²é¿´ÆğÀ´ºÜ²»·½±ã¡£¿
 
 ĞÂ½¨`$ROCKETMQ_HOME/conf/broker.properties`ÎÄ¼ş£¬ÄÚÈİÈçÏÂ£º
 
-    rocketmqHome=f:/rocketmq/RocketMQ/target/alibaba-rocketmq-3.2.2/alibaba-rocketmq
     namesrvAddr=192.168.1.31:9876
     brokerIP1=192.168.1.31
     brokerIP2=192.168.1.31
@@ -261,8 +260,8 @@ RocketMQÄ¬ÈÏÓëÂ·¾¶ÓĞ¹ØµÄÅäÖÃÊôĞÔ¶¼ÓëÓÃ»§Ä¿Â¼ÓĞ¹Ø£¬ÔÚWindowsÏÂ²é¿´ÆğÀ´ºÜ²»·½±ã¡£¿
     defaultTopicQueueNums=8
     autoCreateTopicEnable=true
     listenPort=10911
-    storePathRootDir=f:/rocketmq/RocketMQ/target/alibaba-rocketmq-3.2.2/alibaba-rocketmq/store
-    storePathCommitLog=f:/rocketmq/RocketMQ/target/alibaba-rocketmq-3.2.2/alibaba-rocketmq/store/commitlog
+    storePathRootDir=../store
+    storePathCommitLog=../store/commitlog
     mapedFileSizeCommitLog=3342336
 
 ÖØĞÂÆô¶¯NamingServerºÍBroker:
@@ -327,7 +326,7 @@ RocketMQÄ¬ÈÏÓëÂ·¾¶ÓĞ¹ØµÄÅäÖÃÊôĞÔ¶¼ÓëÓÃ»§Ä¿Â¼ÓĞ¹Ø£¬ÔÚWindowsÏÂ²é¿´ÆğÀ´ºÜ²»·½±ã¡£¿
 
 ÔËĞĞRocketMQ×Ô´ørocketmq-example/com/alibaba/rocketmq/example/quickstartÏÂµÄÏûÏ¢ÊÕ·¢Àı×Ó¡£
 
-##### Producer
+##### ÔËĞĞProducer
 
 ×öÈçÏÂĞŞ¸Ä£º
 
@@ -340,115 +339,115 @@ RocketMQÄ¬ÈÏÓëÂ·¾¶ÓĞ¹ØµÄÅäÖÃÊôĞÔ¶¼ÓëÓÃ»§Ä¿Â¼ÓĞ¹Ø£¬ÔÚWindowsÏÂ²é¿´ÆğÀ´ºÜ²»·½±ã¡£¿
 
 ÔËĞĞÈÕÖ¾£º
 
-java.lang.reflect.InvocationTargetException
-15:18:48.031 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
-15:18:48.046 [main] DEBUG i.n.c.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 6
-15:18:48.046 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
-15:18:48.046 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
-15:18:48.046 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: unavailable
-15:18:48.062 [main] DEBUG i.n.util.internal.PlatformDependent - Platform: Windows
-15:18:48.062 [main] DEBUG i.n.util.internal.PlatformDependent - Java version: 6
-15:18:48.062 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noUnsafe: false
-15:18:48.062 [main] DEBUG i.n.util.internal.PlatformDependent - sun.misc.Unsafe: unavailable
-15:18:48.062 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noJavassist: false
-15:18:48.187 [main] DEBUG i.n.util.internal.PlatformDependent - Javassist: available
-15:18:48.187 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\DOCUME~1\lcp\LOCALS~1\Temp (java.io.tmpdir)
-15:18:48.187 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.bitMode: 32 (sun.arch.data.model)
-15:18:48.187 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: true
-15:18:48.187 [main] INFO  i.n.util.internal.PlatformDependent - Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
-15:18:48.203 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
-15:18:48.203 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
-15:18:48.281 [main] INFO  RocketmqClient - user specfied name server address: 192.168.1.31:9876
-15:18:48.296 [main] INFO  RocketmqClient - created a new client Instance, FactoryIndex: 0 ClinetID: 192.168.1.31@14888 ClientConfig [namesrvAddr=192.168.1.31:9876, clientIP=192.168.1.31, instanceName=14888, clientCallbackExecutorThreads=3, pollNameServerInteval=30000, heartbeatBrokerInterval=30000, persistConsumerOffsetInterval=5000] V3_2_2_SNAPSHOT
-15:18:48.343 [main] DEBUG i.n.util.internal.ThreadLocalRandom - -Dio.netty.initialSeedUniquifier: 0xffd8b012c90017c6 (took 21 ms)
-15:18:48.375 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: unpooled
-15:18:48.375 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 65536
-15:18:48.406 [main] INFO  RocketmqRemoting - createChannel: begin to connect remote host[192.168.1.31:9876] asynchronously
-15:18:48.406 [NettyClientSelector_1] DEBUG i.n.u.i.JavassistTypeParameterMatcherGenerator - Generated: io.netty.util.internal.__matchers__.com.alibaba.rocketmq.remoting.protocol.RemotingCommandMatcher
-15:18:48.421 [NettyClientWorkerThread_1] INFO  RocketmqRemoting - NETTY CLIENT PIPELINE: CONNECT  UNKNOW => /192.168.1.31:9876
-15:18:48.437 [main] INFO  RocketmqRemoting - createChannel: connect remote host[192.168.1.31:9876] success, DefaultChannelPromise@1f78ef1(success)
-15:18:48.437 [main] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacity.default: 262144
-15:18:48.453 [NettyClientWorkerThread_1] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetectionLevel: simple
-15:18:48.671 [PullMessageService] INFO  RocketmqClient - PullMessageService service started
-15:18:48.671 [RebalanceService] INFO  RocketmqClient - RebalanceService service started
-15:18:48.671 [main] INFO  RocketmqClient - the producer [CLIENT_INNER_PRODUCER] start OK
-15:18:48.671 [main] INFO  RocketmqClient - the client factory [192.168.1.31@14888] start OK
-15:18:48.671 [main] INFO  RocketmqClient - the producer [testProducer] start OK
-15:18:48.687 [main] WARN  RocketmqClient - get Topic [TopicTest] RouteInfoFromNameServer is not exist value
-15:18:48.687 [main] WARN  RocketmqClient - updateTopicRouteInfoFromNameServer Exception
-com.alibaba.rocketmq.client.exception.MQClientException: CODE: 17  DESC: No topic route info in name server for the topic: TopicTest
-See https://github.com/alibaba/RocketMQ/issues/55 for further details.
-	at com.alibaba.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1516) ~[bin/:na]
-	at com.alibaba.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:593) [bin/:na]
-	at com.alibaba.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:563) [bin/:na]
-	at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.tryToFindTopicPublishInfo(DefaultMQProducerImpl.java:612) [bin/:na]
-	at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.sendDefaultImpl(DefaultMQProducerImpl.java:498) [bin/:na]
-	at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.send(DefaultMQProducerImpl.java:1026) [bin/:na]
-	at com.alibaba.rocketmq.client.producer.DefaultMQProducer.send(DefaultMQProducer.java:122) [bin/:na]
-	at com.alibaba.rocketmq.example.quickstart.Producer.main(Producer.java:41) [bin/:na]
-15:18:48.718 [MQClientFactoryScheduledThread] WARN  RocketmqClient - get Topic [TopicTest] RouteInfoFromNameServer is not exist value
-15:18:48.718 [MQClientFactoryScheduledThread] WARN  RocketmqClient - updateTopicRouteInfoFromNameServer Exception
-com.alibaba.rocketmq.client.exception.MQClientException: CODE: 17  DESC: No topic route info in name server for the topic: TopicTest
-See https://github.com/alibaba/RocketMQ/issues/55 for further details.
-	at com.alibaba.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1516) ~[bin/:na]
-	at com.alibaba.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:593) [bin/:na]
-	at com.alibaba.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:563) [bin/:na]
-	at com.alibaba.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:557) [bin/:na]
-	at com.alibaba.rocketmq.client.impl.factory.MQClientInstance$3.run(MQClientInstance.java:216) [bin/:na]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:441) [na:1.6.0_20]
-	at java.util.concurrent.FutureTask$Sync.innerRunAndReset(FutureTask.java:317) [na:1.6.0_20]
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:150) [na:1.6.0_20]
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$101(ScheduledThreadPoolExecutor.java:98) [na:1.6.0_20]
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.runPeriodic(ScheduledThreadPoolExecutor.java:181) [na:1.6.0_20]
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:205) [na:1.6.0_20]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886) [na:1.6.0_20]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908) [na:1.6.0_20]
-	at java.lang.Thread.run(Thread.java:619) [na:1.6.0_20]
-15:18:48.765 [MQClientFactoryScheduledThread] INFO  RocketmqClient - the topic[TBW102] route info changed, odl[null] ,new[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=licp, readQueueNums=8, writeQueueNums=8, perm=7, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=licp, brokerAddrs={0=192.168.1.31:10911}]], filterServerTable={}]]
-15:18:48.765 [MQClientFactoryScheduledThread] INFO  RocketmqClient - updateTopicPublishInfo prev is not null, TopicPublishInfo [orderTopic=false, messageQueueList=[], sendWhichQueue=0, haveTopicRouterInfo=false]
-15:18:48.765 [MQClientFactoryScheduledThread] INFO  RocketmqClient - updateTopicPublishInfo prev is not null, TopicPublishInfo [orderTopic=false, messageQueueList=[], sendWhichQueue=0, haveTopicRouterInfo=false]
-15:18:48.765 [MQClientFactoryScheduledThread] INFO  RocketmqClient - topicRouteTable.put TopicRouteData[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=licp, readQueueNums=8, writeQueueNums=8, perm=7, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=licp, brokerAddrs={0=192.168.1.31:10911}]], filterServerTable={}]]
-15:18:48.781 [main] INFO  RocketmqClient - the topic[TopicTest] route info changed, odl[null] ,new[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=licp, readQueueNums=4, writeQueueNums=4, perm=7, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=licp, brokerAddrs={0=192.168.1.31:10911}]], filterServerTable={}]]
-15:18:48.781 [main] INFO  RocketmqClient - updateTopicPublishInfo prev is not null, TopicPublishInfo [orderTopic=false, messageQueueList=[], sendWhichQueue=0, haveTopicRouterInfo=false]
-15:18:48.781 [main] INFO  RocketmqClient - topicRouteTable.put TopicRouteData[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=licp, readQueueNums=4, writeQueueNums=4, perm=7, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=licp, brokerAddrs={0=192.168.1.31:10911}]], filterServerTable={}]]
-15:18:48.781 [main] INFO  RocketmqRemoting - createChannel: begin to connect remote host[192.168.1.31:10911] asynchronously
-15:18:48.781 [NettyClientWorkerThread_2] INFO  RocketmqRemoting - NETTY CLIENT PIPELINE: CONNECT  UNKNOW => /192.168.1.31:10911
-15:18:48.781 [main] INFO  RocketmqRemoting - createChannel: connect remote host[192.168.1.31:10911] success, DefaultChannelPromise@1b8d6f7(success)
-SendResult [sendStatus=SEND_OK, msgId=C0A8011F00002A9F0000000000000000, messageQueue=MessageQueue [topic=TopicTest, brokerName=licp, queueId=0], queueOffset=0]
-SendResult [sendStatus=SEND_OK, msgId=C0A8011F00002A9F0000000000000088, messageQueue=MessageQueue [topic=TopicTest, brokerName=licp, queueId=1], queueOffset=0]
-SendResult [sendStatus=SEND_OK, msgId=C0A8011F00002A9F0000000000000110, messageQueue=MessageQueue [topic=TopicTest, brokerName=licp, queueId=2], queueOffset=0]
-SendResult [sendStatus=SEND_OK, msgId=C0A8011F00002A9F0000000000000198, messageQueue=MessageQueue [topic=TopicTest, brokerName=licp, queueId=3], queueOffset=0]
-SendResult [sendStatus=SEND_OK, msgId=C0A8011F00002A9F0000000000000220, messageQueue=MessageQueue [topic=TopicTest, brokerName=licp, queueId=0], queueOffset=1]
-SendResult [sendStatus=SEND_OK, msgId=C0A8011F00002A9F00000000000002A8, messageQueue=MessageQueue [topic=TopicTest, brokerName=licp, queueId=1], queueOffset=1]
-SendResult [sendStatus=SEND_OK, msgId=C0A8011F00002A9F0000000000000330, messageQueue=MessageQueue [topic=TopicTest, brokerName=licp, queueId=2], queueOffset=1]
-SendResult [sendStatus=SEND_OK, msgId=C0A8011F00002A9F00000000000003B8, messageQueue=MessageQueue [topic=TopicTest, brokerName=licp, queueId=3], queueOffset=1]
-SendResult [sendStatus=SEND_OK, msgId=C0A8011F00002A9F0000000000000440, messageQueue=MessageQueue [topic=TopicTest, brokerName=licp, queueId=0], queueOffset=2]
-SendResult [sendStatus=SEND_OK, msgId=C0A8011F00002A9F00000000000004C8, messageQueue=MessageQueue [topic=TopicTest, brokerName=licp, queueId=1], queueOffset=2]
-15:18:48.953 [main] INFO  RocketmqClient - unregister client[Producer: testProducer Consumer: null] from broker[licp 0 192.168.1.31:10911] success
-15:18:48.953 [main] INFO  RocketmqClient - unregister client[Producer: CLIENT_INNER_PRODUCER Consumer: null] from broker[licp 0 192.168.1.31:10911] success
-15:18:48.968 [main] INFO  RocketmqClient - the producer [CLIENT_INNER_PRODUCER] shutdown OK
-15:18:48.968 [main] INFO  RocketmqCommon - shutdown thread PullMessageService interrupt true
-15:18:48.968 [PullMessageService] INFO  RocketmqClient - PullMessageService service end
-15:18:48.968 [main] INFO  RocketmqCommon - join thread PullMessageService eclipse time(ms) 0 90000
-15:18:48.968 [main] INFO  RocketmqRemoting - closeChannel: begin close the channel[192.168.1.31:10911] Found: true
-15:18:48.968 [main] INFO  RocketmqRemoting - closeChannel: the channel[192.168.1.31:10911] was removed from channel table
-15:18:48.968 [main] INFO  RocketmqRemoting - closeChannel: begin close the channel[192.168.1.31:9876] Found: true
-15:18:48.968 [main] INFO  RocketmqRemoting - closeChannel: the channel[192.168.1.31:9876] was removed from channel table
-15:18:48.968 [main] INFO  RocketmqRemoting - shutdown thread NettyEventExecuter interrupt false
-15:18:48.968 [main] INFO  RocketmqRemoting - join thread NettyEventExecuter eclipse time(ms) 0 90000
-15:18:48.968 [main] INFO  RocketmqCommon - shutdown thread RebalanceService interrupt false
-15:18:48.968 [RebalanceService] INFO  RocketmqClient - RebalanceService service end
-15:18:48.968 [main] INFO  RocketmqCommon - join thread RebalanceService eclipse time(ms) 0 90000
-15:18:48.968 [main] INFO  RocketmqClient - the client factory [192.168.1.31@14888] shutdown OK
-15:18:48.968 [main] INFO  RocketmqClient - the producer [testProducer] shutdown OK
-15:18:48.968 [NettyClientWorkerThread_2] INFO  RocketmqRemoting - NETTY CLIENT PIPELINE: CLOSE 192.168.1.31:10911
-15:18:48.968 [NettyClientWorkerThread_2] INFO  RocketmqRemoting - eventCloseChannel: the channel[null] has been removed from the channel table before
-15:18:48.968 [NettyClientWorkerThread_1] INFO  RocketmqRemoting - NETTY CLIENT PIPELINE: CLOSE 192.168.1.31:9876
-15:18:48.968 [NettyClientWorkerThread_1] INFO  RocketmqRemoting - eventCloseChannel: the channel[null] has been removed from the channel table before
-15:18:48.984 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.1.31:10911] result: true
-15:18:48.984 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.1.31:9876] result: true
+    java.lang.reflect.InvocationTargetException
+    15:18:48.031 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+    15:18:48.046 [main] DEBUG i.n.c.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 6
+    15:18:48.046 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+    15:18:48.046 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+    15:18:48.046 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: unavailable
+    15:18:48.062 [main] DEBUG i.n.util.internal.PlatformDependent - Platform: Windows
+    15:18:48.062 [main] DEBUG i.n.util.internal.PlatformDependent - Java version: 6
+    15:18:48.062 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noUnsafe: false
+    15:18:48.062 [main] DEBUG i.n.util.internal.PlatformDependent - sun.misc.Unsafe: unavailable
+    15:18:48.062 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noJavassist: false
+    15:18:48.187 [main] DEBUG i.n.util.internal.PlatformDependent - Javassist: available
+    15:18:48.187 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\DOCUME~1\lcp\LOCALS~1\Temp (java.io.tmpdir)
+    15:18:48.187 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.bitMode: 32 (sun.arch.data.model)
+    15:18:48.187 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: true
+    15:18:48.187 [main] INFO  i.n.util.internal.PlatformDependent - Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+    15:18:48.203 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+    15:18:48.203 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+    15:18:48.281 [main] INFO  RocketmqClient - user specfied name server address: 192.168.1.31:9876
+    15:18:48.296 [main] INFO  RocketmqClient - created a new client Instance, FactoryIndex: 0 ClinetID: 192.168.1.31@14888 ClientConfig [namesrvAddr=192.168.1.31:9876, clientIP=192.168.1.31, instanceName=14888, clientCallbackExecutorThreads=3, pollNameServerInteval=30000, heartbeatBrokerInterval=30000, persistConsumerOffsetInterval=5000] V3_2_2_SNAPSHOT
+    15:18:48.343 [main] DEBUG i.n.util.internal.ThreadLocalRandom - -Dio.netty.initialSeedUniquifier: 0xffd8b012c90017c6 (took 21 ms)
+    15:18:48.375 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: unpooled
+    15:18:48.375 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 65536
+    15:18:48.406 [main] INFO  RocketmqRemoting - createChannel: begin to connect remote host[192.168.1.31:9876] asynchronously
+    15:18:48.406 [NettyClientSelector_1] DEBUG i.n.u.i.JavassistTypeParameterMatcherGenerator - Generated: io.netty.util.internal.__matchers__.com.alibaba.rocketmq.remoting.protocol.RemotingCommandMatcher
+    15:18:48.421 [NettyClientWorkerThread_1] INFO  RocketmqRemoting - NETTY CLIENT PIPELINE: CONNECT  UNKNOW => /192.168.1.31:9876
+    15:18:48.437 [main] INFO  RocketmqRemoting - createChannel: connect remote host[192.168.1.31:9876] success, DefaultChannelPromise@1f78ef1(success)
+    15:18:48.437 [main] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacity.default: 262144
+    15:18:48.453 [NettyClientWorkerThread_1] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetectionLevel: simple
+    15:18:48.671 [PullMessageService] INFO  RocketmqClient - PullMessageService service started
+    15:18:48.671 [RebalanceService] INFO  RocketmqClient - RebalanceService service started
+    15:18:48.671 [main] INFO  RocketmqClient - the producer [CLIENT_INNER_PRODUCER] start OK
+    15:18:48.671 [main] INFO  RocketmqClient - the client factory [192.168.1.31@14888] start OK
+    15:18:48.671 [main] INFO  RocketmqClient - the producer [testProducer] start OK
+    15:18:48.687 [main] WARN  RocketmqClient - get Topic [TopicTest] RouteInfoFromNameServer is not exist value
+    15:18:48.687 [main] WARN  RocketmqClient - updateTopicRouteInfoFromNameServer Exception
+    com.alibaba.rocketmq.client.exception.MQClientException: CODE: 17  DESC: No topic route info in name server for the topic: TopicTest
+    See https://github.com/alibaba/RocketMQ/issues/55 for further details.
+        at com.alibaba.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1516) ~[bin/:na]
+        at com.alibaba.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:593) [bin/:na]
+        at com.alibaba.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:563) [bin/:na]
+        at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.tryToFindTopicPublishInfo(DefaultMQProducerImpl.java:612) [bin/:na]
+        at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.sendDefaultImpl(DefaultMQProducerImpl.java:498) [bin/:na]
+        at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.send(DefaultMQProducerImpl.java:1026) [bin/:na]
+        at com.alibaba.rocketmq.client.producer.DefaultMQProducer.send(DefaultMQProducer.java:122) [bin/:na]
+        at com.alibaba.rocketmq.example.quickstart.Producer.main(Producer.java:41) [bin/:na]
+    15:18:48.718 [MQClientFactoryScheduledThread] WARN  RocketmqClient - get Topic [TopicTest] RouteInfoFromNameServer is not exist value
+    15:18:48.718 [MQClientFactoryScheduledThread] WARN  RocketmqClient - updateTopicRouteInfoFromNameServer Exception
+    com.alibaba.rocketmq.client.exception.MQClientException: CODE: 17  DESC: No topic route info in name server for the topic: TopicTest
+    See https://github.com/alibaba/RocketMQ/issues/55 for further details.
+        at com.alibaba.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1516) ~[bin/:na]
+        at com.alibaba.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:593) [bin/:na]
+        at com.alibaba.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:563) [bin/:na]
+        at com.alibaba.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:557) [bin/:na]
+        at com.alibaba.rocketmq.client.impl.factory.MQClientInstance$3.run(MQClientInstance.java:216) [bin/:na]
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:441) [na:1.6.0_20]
+        at java.util.concurrent.FutureTask$Sync.innerRunAndReset(FutureTask.java:317) [na:1.6.0_20]
+        at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:150) [na:1.6.0_20]
+        at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$101(ScheduledThreadPoolExecutor.java:98) [na:1.6.0_20]
+        at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.runPeriodic(ScheduledThreadPoolExecutor.java:181) [na:1.6.0_20]
+        at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:205) [na:1.6.0_20]
+        at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886) [na:1.6.0_20]
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908) [na:1.6.0_20]
+        at java.lang.Thread.run(Thread.java:619) [na:1.6.0_20]
+    15:18:48.765 [MQClientFactoryScheduledThread] INFO  RocketmqClient - the topic[TBW102] route info changed, odl[null] ,new[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=licp, readQueueNums=8, writeQueueNums=8, perm=7, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=licp, brokerAddrs={0=192.168.1.31:10911}]], filterServerTable={}]]
+    15:18:48.765 [MQClientFactoryScheduledThread] INFO  RocketmqClient - updateTopicPublishInfo prev is not null, TopicPublishInfo [orderTopic=false, messageQueueList=[], sendWhichQueue=0, haveTopicRouterInfo=false]
+    15:18:48.765 [MQClientFactoryScheduledThread] INFO  RocketmqClient - updateTopicPublishInfo prev is not null, TopicPublishInfo [orderTopic=false, messageQueueList=[], sendWhichQueue=0, haveTopicRouterInfo=false]
+    15:18:48.765 [MQClientFactoryScheduledThread] INFO  RocketmqClient - topicRouteTable.put TopicRouteData[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=licp, readQueueNums=8, writeQueueNums=8, perm=7, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=licp, brokerAddrs={0=192.168.1.31:10911}]], filterServerTable={}]]
+    15:18:48.781 [main] INFO  RocketmqClient - the topic[TopicTest] route info changed, odl[null] ,new[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=licp, readQueueNums=4, writeQueueNums=4, perm=7, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=licp, brokerAddrs={0=192.168.1.31:10911}]], filterServerTable={}]]
+    15:18:48.781 [main] INFO  RocketmqClient - updateTopicPublishInfo prev is not null, TopicPublishInfo [orderTopic=false, messageQueueList=[], sendWhichQueue=0, haveTopicRouterInfo=false]
+    15:18:48.781 [main] INFO  RocketmqClient - topicRouteTable.put TopicRouteData[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=licp, readQueueNums=4, writeQueueNums=4, perm=7, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=licp, brokerAddrs={0=192.168.1.31:10911}]], filterServerTable={}]]
+    15:18:48.781 [main] INFO  RocketmqRemoting - createChannel: begin to connect remote host[192.168.1.31:10911] asynchronously
+    15:18:48.781 [NettyClientWorkerThread_2] INFO  RocketmqRemoting - NETTY CLIENT PIPELINE: CONNECT  UNKNOW => /192.168.1.31:10911
+    15:18:48.781 [main] INFO  RocketmqRemoting - createChannel: connect remote host[192.168.1.31:10911] success, DefaultChannelPromise@1b8d6f7(success)
+    SendResult [sendStatus=SEND_OK, msgId=C0A8011F00002A9F0000000000000000, messageQueue=MessageQueue [topic=TopicTest, brokerName=licp, queueId=0], queueOffset=0]
+    SendResult [sendStatus=SEND_OK, msgId=C0A8011F00002A9F0000000000000088, messageQueue=MessageQueue [topic=TopicTest, brokerName=licp, queueId=1], queueOffset=0]
+    SendResult [sendStatus=SEND_OK, msgId=C0A8011F00002A9F0000000000000110, messageQueue=MessageQueue [topic=TopicTest, brokerName=licp, queueId=2], queueOffset=0]
+    SendResult [sendStatus=SEND_OK, msgId=C0A8011F00002A9F0000000000000198, messageQueue=MessageQueue [topic=TopicTest, brokerName=licp, queueId=3], queueOffset=0]
+    SendResult [sendStatus=SEND_OK, msgId=C0A8011F00002A9F0000000000000220, messageQueue=MessageQueue [topic=TopicTest, brokerName=licp, queueId=0], queueOffset=1]
+    SendResult [sendStatus=SEND_OK, msgId=C0A8011F00002A9F00000000000002A8, messageQueue=MessageQueue [topic=TopicTest, brokerName=licp, queueId=1], queueOffset=1]
+    SendResult [sendStatus=SEND_OK, msgId=C0A8011F00002A9F0000000000000330, messageQueue=MessageQueue [topic=TopicTest, brokerName=licp, queueId=2], queueOffset=1]
+    SendResult [sendStatus=SEND_OK, msgId=C0A8011F00002A9F00000000000003B8, messageQueue=MessageQueue [topic=TopicTest, brokerName=licp, queueId=3], queueOffset=1]
+    SendResult [sendStatus=SEND_OK, msgId=C0A8011F00002A9F0000000000000440, messageQueue=MessageQueue [topic=TopicTest, brokerName=licp, queueId=0], queueOffset=2]
+    SendResult [sendStatus=SEND_OK, msgId=C0A8011F00002A9F00000000000004C8, messageQueue=MessageQueue [topic=TopicTest, brokerName=licp, queueId=1], queueOffset=2]
+    15:18:48.953 [main] INFO  RocketmqClient - unregister client[Producer: testProducer Consumer: null] from broker[licp 0 192.168.1.31:10911] success
+    15:18:48.953 [main] INFO  RocketmqClient - unregister client[Producer: CLIENT_INNER_PRODUCER Consumer: null] from broker[licp 0 192.168.1.31:10911] success
+    15:18:48.968 [main] INFO  RocketmqClient - the producer [CLIENT_INNER_PRODUCER] shutdown OK
+    15:18:48.968 [main] INFO  RocketmqCommon - shutdown thread PullMessageService interrupt true
+    15:18:48.968 [PullMessageService] INFO  RocketmqClient - PullMessageService service end
+    15:18:48.968 [main] INFO  RocketmqCommon - join thread PullMessageService eclipse time(ms) 0 90000
+    15:18:48.968 [main] INFO  RocketmqRemoting - closeChannel: begin close the channel[192.168.1.31:10911] Found: true
+    15:18:48.968 [main] INFO  RocketmqRemoting - closeChannel: the channel[192.168.1.31:10911] was removed from channel table
+    15:18:48.968 [main] INFO  RocketmqRemoting - closeChannel: begin close the channel[192.168.1.31:9876] Found: true
+    15:18:48.968 [main] INFO  RocketmqRemoting - closeChannel: the channel[192.168.1.31:9876] was removed from channel table
+    15:18:48.968 [main] INFO  RocketmqRemoting - shutdown thread NettyEventExecuter interrupt false
+    15:18:48.968 [main] INFO  RocketmqRemoting - join thread NettyEventExecuter eclipse time(ms) 0 90000
+    15:18:48.968 [main] INFO  RocketmqCommon - shutdown thread RebalanceService interrupt false
+    15:18:48.968 [RebalanceService] INFO  RocketmqClient - RebalanceService service end
+    15:18:48.968 [main] INFO  RocketmqCommon - join thread RebalanceService eclipse time(ms) 0 90000
+    15:18:48.968 [main] INFO  RocketmqClient - the client factory [192.168.1.31@14888] shutdown OK
+    15:18:48.968 [main] INFO  RocketmqClient - the producer [testProducer] shutdown OK
+    15:18:48.968 [NettyClientWorkerThread_2] INFO  RocketmqRemoting - NETTY CLIENT PIPELINE: CLOSE 192.168.1.31:10911
+    15:18:48.968 [NettyClientWorkerThread_2] INFO  RocketmqRemoting - eventCloseChannel: the channel[null] has been removed from the channel table before
+    15:18:48.968 [NettyClientWorkerThread_1] INFO  RocketmqRemoting - NETTY CLIENT PIPELINE: CLOSE 192.168.1.31:9876
+    15:18:48.968 [NettyClientWorkerThread_1] INFO  RocketmqRemoting - eventCloseChannel: the channel[null] has been removed from the channel table before
+    15:18:48.984 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.1.31:10911] result: true
+    15:18:48.984 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.1.31:9876] result: true
 
-##### Consumer
+##### ÔËĞĞConsumer
 
 ×öÈçÏÂĞŞ¸Ä£º
 
@@ -540,12 +539,12 @@ SendResult [sendStatus=SEND_OK, msgId=C0A8011F00002A9F00000000000004C8, messageQ
 
 ### ÎÊÌâ¼ÇÂ¼
 
-1. java.lang.reflect.InvocationTargetException
+##### java.lang.reflect.InvocationTargetException
 
 ProducerºÍConsumerÔËĞĞÊ±£¬×ÜÊÇ´òÓ¡Õâ¸öÒì³££¬Ã»ÓĞÈÎºÎÌáÊ¾ĞÅÏ¢¡£¸ú×ÙÔ´ÂëÎÊÌâ³öÔÚ`com.alibaba.rocketmq.client.log.ClientLogger`Õâ¸öÀà
 ³õÊ¼»¯¿Í»§¶ËLoggerµÄ·½·¨createLoggerÉÏ£º
 
-   final String logback_resource_file =
+    final String logback_resource_file =
                 System
                     .getProperty("rocketmq.client.logback.resource.fileName", "logback_rocketmq_client.xml");
     ......
@@ -564,7 +563,7 @@ ProducerºÍConsumerÔËĞĞÊ±£¬×ÜÊÇ´òÓ¡Õâ¸öÒì³££¬Ã»ÓĞÈÎºÎÌáÊ¾ĞÅÏ¢¡£¸ú×ÙÔ´ÂëÎÊÌâ³öÔÚ`c
 
 ÒòÎªÎÒÖ±½ÓÔÚeclipseÖĞµ¼ÈëÔ´Âë£¬Ã»ÓĞ°üº¬`logback_rocketmq_client.xml`Õâ¸öÅäÖÃÎÄ¼ş£¬µ¼ÖÂurlÎªnull£¬ËùÒÔÔÚ`JoranConfigurator.doConfigure`
 Ê±·¢ÉúÁËNPL£¬ÊäÈë¶ÑÕ»ĞÅÏ¢¾Í¿ÉÒÔºÜÃ÷°×µÄ¿´µ½ÈçÏÂ£º
-
+    
     java.lang.reflect.InvocationTargetException
         at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
         at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -585,7 +584,7 @@ ProducerºÍConsumerÔËĞĞÊ±£¬×ÜÊÇ´òÓ¡Õâ¸öÒì³££¬Ã»ÓĞÈÎºÎÌáÊ¾ĞÅÏ¢¡£¸ú×ÙÔ´ÂëÎÊÌâ³öÔÚ`c
 - `System.err.println(e)`Õâ¿éµÄ´¦ÀíºÜ²»ºÏÀí¡£Ó¦¸Ã×÷ÎªWARNÈÕÖ¾²¢ËµÃ÷Ô­Òò
 - ¿Í»§¶Ë¼ÈÈ»Ê¹ÓÃÁË***slf4j***£¬ÄÇÃ´ÓÃ»§×îÖÕÊ¹ÓÃÄÇ¸öÈÕÖ¾ÏµÍ³ÒÔ¼°ÔõÃ´ÅäÖÃ¾ÍÍêÈ«¾ÍÊÇÓÃ»§µÄÊÂÁË£¬Ã»±ØÒªÔÚClientLoggerÖĞ×öÕâÃ´¶àÈÕÖ¾Ïà¹ØµÄ´¦Àí
 
-2. CODE: 17  DESC: No topic route info in name server for the topic: TopicTest
+##### CODE: 17  DESC: No topic route info in name server for the topic: TopicTest
 
 µÚÒ»´ÎÔËĞĞProducer³öÏÖÕâ¸öÒì³£ĞÅÏ¢£¬½Ó×ÅÔËĞĞConsumerÊ±Ã»ÓĞ³öÏÖ£¬µÚ¶ş´ÎÔËĞĞProducerÒ²²»»á³öÏÖ¡£Ó¦¸ÃÊÇµÚÒ»´ÎÔËĞĞÊ±£¬NamingServerÖĞ»¹Ã»ÓĞ
 TopicTestµÄÂ·ÓÉĞÅÏ¢µ¼ÖÂµÄ¡£
