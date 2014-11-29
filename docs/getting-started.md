@@ -563,7 +563,7 @@ Producer和Consumer运行时，总是打印这个异常，没有任何提示信息。跟踪源码问题出在`c
 
 因为我直接在eclipse中导入源码，没有包含`logback_rocketmq_client.xml`这个配置文件，导致url为null，所以在`JoranConfigurator.doConfigure`
 时发生了NPL，输入堆栈信息就可以很明白的看到如下：
-    
+
     java.lang.reflect.InvocationTargetException
         at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
         at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
