@@ -584,7 +584,7 @@ Producer和Consumer运行时，总是打印这个异常，没有任何提示信息。跟踪源码问题出在`c
 - `System.err.println(e)`这块的处理很不合理。应该作为WARN日志并说明原因
 - 客户端既然使用了***slf4j***，那么用户最终使用那个日志系统以及怎么配置就完全就是用户的事了，没必要在ClientLogger中做这么多日志相关的处理
 
-##### CODE: 17  DESC: No topic route info in name server for the topic: TopicTest
+##### CODE: 17  DESC: No topic route info in name server for the topic: TopicTest 
 
 第一次运行Producer出现这个异常信息，接着运行Consumer时没有出现，第二次运行Producer也不会出现。应该是第一次运行时，NamingServer中还没有
 TopicTest的路由信息导致的。
